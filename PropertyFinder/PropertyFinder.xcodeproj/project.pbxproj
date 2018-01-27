@@ -20,6 +20,8 @@
 		EE306D56201C7B7500346105 /* PropertyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D55201C7B7500346105 /* PropertyResponse.swift */; };
 		EE306D59201C801500346105 /* PropertyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D58201C801500346105 /* PropertyListView.swift */; };
 		EE306D5B201C80E100346105 /* PropertyListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D5A201C80E100346105 /* PropertyListItemView.swift */; };
+		EE306D5E201C824600346105 /* SegueHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D5D201C824600346105 /* SegueHandler.swift */; };
+		EE306D61201C82ED00346105 /* PropertyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D60201C82ED00346105 /* PropertyTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		EE306D55201C7B7500346105 /* PropertyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyResponse.swift; sourceTree = "<group>"; };
 		EE306D58201C801500346105 /* PropertyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListView.swift; sourceTree = "<group>"; };
 		EE306D5A201C80E100346105 /* PropertyListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListItemView.swift; sourceTree = "<group>"; };
+		EE306D5D201C824600346105 /* SegueHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueHandler.swift; sourceTree = "<group>"; };
+		EE306D60201C82ED00346105 /* PropertyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +58,6 @@
 		EE306D27201C6BC400346105 = {
 			isa = PBXGroup;
 			children = (
-				EE306D57201C7FE900346105 /* Presentation */,
 				EE306D32201C6BC400346105 /* PropertyFinder */,
 				EE306D31201C6BC400346105 /* Products */,
 			);
@@ -71,13 +74,11 @@
 		EE306D32201C6BC400346105 /* PropertyFinder */ = {
 			isa = PBXGroup;
 			children = (
+				EE306D65201C841400346105 /* Platform */,
+				EE306D57201C7FE900346105 /* Presentation */,
 				EE306D47201C72F400346105 /* Domain */,
-				EE306D33201C6BC400346105 /* AppDelegate.swift */,
-				EE306D37201C6BC400346105 /* Main.storyboard */,
-				EE306D3A201C6BC400346105 /* Assets.xcassets */,
-				EE306D3C201C6BC400346105 /* LaunchScreen.storyboard */,
-				EE306D3F201C6BC400346105 /* Info.plist */,
-				EE306D45201C6D1400346105 /* PropertyTableViewController.swift */,
+				EE306D66201C845E00346105 /* Data */,
+				EE306D64201C838500346105 /* SupportFiles */,
 			);
 			path = PropertyFinder;
 			sourceTree = "<group>";
@@ -126,6 +127,59 @@
 				EE306D5A201C80E100346105 /* PropertyListItemView.swift */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		EE306D5C201C822400346105 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EE306D5D201C824600346105 /* SegueHandler.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		EE306D5F201C82AA00346105 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EE306D3C201C6BC400346105 /* LaunchScreen.storyboard */,
+				EE306D37201C6BC400346105 /* Main.storyboard */,
+				EE306D45201C6D1400346105 /* PropertyTableViewController.swift */,
+				EE306D60201C82ED00346105 /* PropertyTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EE306D62201C830F00346105 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				EE306D33201C6BC400346105 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		EE306D64201C838500346105 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				EE306D3A201C6BC400346105 /* Assets.xcassets */,
+				EE306D3F201C6BC400346105 /* Info.plist */,
+			);
+			name = SupportFiles;
+			sourceTree = "<group>";
+		};
+		EE306D65201C841400346105 /* Platform */ = {
+			isa = PBXGroup;
+			children = (
+				EE306D62201C830F00346105 /* AppDelegate */,
+				EE306D5F201C82AA00346105 /* Views */,
+				EE306D5C201C822400346105 /* Helpers */,
+			);
+			path = Platform;
+			sourceTree = "<group>";
+		};
+		EE306D66201C845E00346105 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,11 +256,13 @@
 			files = (
 				EE306D4A201C735F00346105 /* Property.swift in Sources */,
 				EE306D59201C801500346105 /* PropertyListView.swift in Sources */,
+				EE306D61201C82ED00346105 /* PropertyTableViewCell.swift in Sources */,
 				EE306D4C201C75ED00346105 /* UseCase.swift in Sources */,
 				EE306D4F201C76BC00346105 /* ShowPropertiesListUseCase.swift in Sources */,
 				EE306D5B201C80E100346105 /* PropertyListItemView.swift in Sources */,
 				EE306D46201C6D1400346105 /* PropertyTableViewController.swift in Sources */,
 				EE306D34201C6BC400346105 /* AppDelegate.swift in Sources */,
+				EE306D5E201C824600346105 /* SegueHandler.swift in Sources */,
 				EE306D56201C7B7500346105 /* PropertyResponse.swift in Sources */,
 				EE306D53201C7AE800346105 /* UseCaseFactory.swift in Sources */,
 				EE306D51201C771100346105 /* EntityGateway.swift in Sources */,
