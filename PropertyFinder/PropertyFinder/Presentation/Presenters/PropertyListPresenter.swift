@@ -21,14 +21,11 @@ class PropertyListPresenter {
     
     
     // MARK: - Initializers
-    
     init(useCaseFactory: UseCaseFactory) {
         self.useCaseFactory = useCaseFactory
     }
     
-    
     // MARK: - Events
-    
     func viewReady() {
         executeShowPropertiesListUseCase()
     }

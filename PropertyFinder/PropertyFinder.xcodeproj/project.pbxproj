@@ -27,6 +27,8 @@
 		EE306D70201C9C9C00346105 /* URLImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D6F201C9C9C00346105 /* URLImageLoader.swift */; };
 		EE306D72201C9D3F00346105 /* InMemoryRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D71201C9D3F00346105 /* InMemoryRepo.swift */; };
 		EE306D74201CA23200346105 /* JsonLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D73201CA23200346105 /* JsonLoader.swift */; };
+		EE306D77201CC68200346105 /* LoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE306D75201CC68100346105 /* LoadingViewController.xib */; };
+		EE306D78201CC68200346105 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D76201CC68200346105 /* LoadingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		EE306D6F201C9C9C00346105 /* URLImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageLoader.swift; sourceTree = "<group>"; };
 		EE306D71201C9D3F00346105 /* InMemoryRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryRepo.swift; sourceTree = "<group>"; };
 		EE306D73201CA23200346105 /* JsonLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonLoader.swift; sourceTree = "<group>"; };
+		EE306D75201CC68100346105 /* LoadingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingViewController.xib; sourceTree = "<group>"; };
+		EE306D76201CC68200346105 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,8 @@
 		EE306D5C201C822400346105 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				EE306D76201CC68200346105 /* LoadingViewController.swift */,
+				EE306D75201CC68100346105 /* LoadingViewController.xib */,
 				EE306D5D201C824600346105 /* SegueHandler.swift */,
 			);
 			path = Helpers;
@@ -291,6 +297,7 @@
 				EE306D3E201C6BC400346105 /* LaunchScreen.storyboard in Resources */,
 				EE306D3B201C6BC400346105 /* Assets.xcassets in Resources */,
 				EE306D39201C6BC400346105 /* Main.storyboard in Resources */,
+				EE306D77201CC68200346105 /* LoadingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +313,7 @@
 				EE306D59201C801500346105 /* PropertyListView.swift in Sources */,
 				EE306D72201C9D3F00346105 /* InMemoryRepo.swift in Sources */,
 				EE306D61201C82ED00346105 /* PropertyTableViewCell.swift in Sources */,
+				EE306D78201CC68200346105 /* LoadingViewController.swift in Sources */,
 				EE306D74201CA23200346105 /* JsonLoader.swift in Sources */,
 				EE306D4C201C75ED00346105 /* UseCase.swift in Sources */,
 				EE306D70201C9C9C00346105 /* URLImageLoader.swift in Sources */,

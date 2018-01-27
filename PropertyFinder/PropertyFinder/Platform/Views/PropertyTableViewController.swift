@@ -14,7 +14,7 @@ class PropertyTableViewController: UITableViewController {
     // we can force unrwap here because the view controllers should never have the presenter or the connector nil.
     var presenter: PropertyListPresenter!
     var connector: PropertyListConnector!
-    
+    let loadingView = LoadingViewController()
     lazy var data: NSDictionary = NSDictionary()
     lazy var rootConnector: PropertyListConnector = {
         let entityGateway = InMemoryRepo(propertiesDictinary: data)
@@ -23,11 +23,13 @@ class PropertyTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadingView.showLoadingView("Fetching Data", inViewController: self)
         JsonLoader.getJsonFrom(urlString: "https://www.propertyfinder.ae/mobileapi") { (dict) in
             DispatchQueue.main.async {
                 self.data = dict!
                 self.rootConnector.assembleModule(view: self)
                 self.presenter.viewReady()
+                self.loadingView.hideLoadingView()
             }
         }
     }
@@ -50,13 +52,10 @@ class PropertyTableViewController: UITableViewController {
             return 0
         }
     }
-    
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: PropertyTableViewCell.ID, for: indexPath) as! PropertyTableViewCell
-        
         presenter.configure(cell: cell, forRow: indexPath.row)
-        
         return cell
     }
     
