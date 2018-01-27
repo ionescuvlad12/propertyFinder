@@ -11,6 +11,5 @@ import Foundation
 
 protocol PropertyListView: class {
     func refresh()
-    // to do here add the continues scrolling and navigation for sorting
-    // remove this after implementing
+    func navigateToSortPropery()
 }

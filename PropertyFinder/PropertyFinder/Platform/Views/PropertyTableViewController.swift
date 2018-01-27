@@ -8,13 +8,22 @@
 
 import UIKit
 
-class PropertyTableViewController: UITableViewController {
+class PropertyTableViewController: UITableViewController, SegueHandler {
     
+    //MARK: -Constants
+    static let ID = "PropertyTableViewController"
+    enum SegueIdentifier: String {
+        case sortProperty = "SortProperty"
+    }
+
     // MARK: - Properties
     // we can force unrwap here because the view controllers should never have the presenter or the connector nil.
     var presenter: PropertyListPresenter!
     var connector: PropertyListConnector!
+    
     let loadingView = LoadingViewController()
+    @IBOutlet weak var sortButton: UIBarButtonItem!
+    
     lazy var data: NSDictionary = NSDictionary()
     lazy var rootConnector: PropertyListConnector = {
         let entityGateway = InMemoryRepo(propertiesDictinary: data)
@@ -24,7 +33,7 @@ class PropertyTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadingView.showLoadingView("Fetching Data", inViewController: self)
-        JsonLoader.getJsonFrom(urlString: "https://www.propertyfinder.ae/mobileapi") { (dict) in
+        JsonLoader.getJsonFrom(urlString: URLPropertyFinderConstructor.createURL(withOrder: nil, andPageNumber: 0)) { (dict) in
             DispatchQueue.main.async {
                 self.data = dict!
                 self.rootConnector.assembleModule(view: self)
@@ -33,10 +42,19 @@ class PropertyTableViewController: UITableViewController {
             }
         }
     }
+    override func viewWillAppear(_ animated: Bool) {
+        sortButton.isEnabled = true
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    //MARK: - UI Actions
+    
+    @IBAction func sort(_ sender: UIBarButtonItem) {
+        presenter.sortButtonTapped()
     }
     
     // MARK: - Table view data source
@@ -60,53 +78,27 @@ class PropertyTableViewController: UITableViewController {
     }
     
     
-    /*
-     // Override to support conditional editing of the table view.
-     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the specified item to be editable.
-     return true
-     }
-     */
+    // MARK: - Segues
     
-    /*
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let identifier = try! segueIdentifier(for: segue)
+        switch identifier {
+        case .sortProperty: connector.navigateToSortProperty(viewController: segue.destination)
+        }
+    }
     
-    /*
-     // Override to support rearranging the table view.
-     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     
-     }
-     */
+    // MARK: Unwinds
     
-    /*
-     // Override to support conditional rearranging of the table view.
-     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the item to be re-orderable.
-     return true
-     }
-     */
+    @IBAction func unwindToPropertyList(segue: UIStoryboardSegue) {
+        presenter.dataChanged() }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }
 extension PropertyTableViewController: PropertyListView {
+    func navigateToSortPropery() {
+        performSegue(withIdentifier: SegueIdentifier.sortProperty, sender: self)
+    }
+    
     func refresh() {
         tableView.reloadData()
     }

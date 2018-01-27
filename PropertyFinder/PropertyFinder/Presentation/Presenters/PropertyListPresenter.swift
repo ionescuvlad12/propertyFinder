@@ -17,7 +17,6 @@ class PropertyListPresenter {
         return properties.count
     }
     private var properties = [PropertyResponse]()
-    var selectedId: String?
     
     
     // MARK: - Initializers
@@ -32,7 +31,8 @@ class PropertyListPresenter {
     
     private func executeShowPropertiesListUseCase() {
         let useCase = useCaseFactory.showPropertiesListUseCase(handler: self)
-        useCase.execute()
+        useCase.execute { (success) in
+        }
     }
     
     func configure(cell: PropertyListItemView, forRow row: Int) {
@@ -43,7 +43,7 @@ class PropertyListPresenter {
     }
     
     func sortButtonTapped() {
-        
+        view.navigateToSortPropery()
     }
     
     func dataChanged() {
@@ -54,6 +54,8 @@ class PropertyListPresenter {
 extension PropertyListPresenter: MultiplePropertiesResponsesHandler {
     func handleMultiplePropertiesResponses(properties: [PropertyResponse]) {
         self.properties = properties
-        view.refresh()
+        DispatchQueue.main.async {
+            self.view.refresh()
+        }
     }
 }

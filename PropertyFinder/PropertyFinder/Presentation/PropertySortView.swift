@@ -1,5 +1,5 @@
 //
-//  UseCase.swift
+//  PropertySortPresenter.swift
 //  PropertyFinder
 //
 //  Created by Ionescu Vlad on 27/01/2018.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol UseCase {
-    func execute(completion: @escaping (_ success: Bool) -> Void)
+protocol PropertySortView: class {
+    func dismiss()
 }

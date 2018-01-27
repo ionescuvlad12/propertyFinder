@@ -20,7 +20,7 @@ class ShowPropertiesListUseCase {
     }
 }
 extension ShowPropertiesListUseCase: UseCase {
-    func execute() {
+    func execute(completion: @escaping (Bool) -> Void) {
         let properties = entityGateway.fetchProperties()
         let response = properties.map { PropertyResponse(property: $0) }
         handler?.handleMultiplePropertiesResponses(properties: response)

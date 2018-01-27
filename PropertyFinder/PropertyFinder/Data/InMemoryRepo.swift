@@ -27,9 +27,21 @@ class InMemoryRepo {
 
 
 extension InMemoryRepo: EntityGateway {
+    func sortProperties(with dict: NSDictionary) {
+        properties.removeAll()
+        if let propertiesDictionaries = dict.value(forKey: "res") as? [NSDictionary] {
+                for dict in  propertiesDictionaries{
+                    let id:String = String(describing: dict.value(forKey: "id"))
+                    let thumbnailURL: String = dict.value(forKey: "thumbnail") as! String
+                    let price: Double = dict.value(forKey: "price_value_raw") as! Double
+                    let beds: Int = dict.value(forKey: "bedrooms") as! Int
+                    let property = Property(id: id, thumbnailURL: thumbnailURL, price: price, beds: beds)
+                    self.properties.append(property)
+                }
+        }
+    }
+    
     func fetchProperties() -> [Property] {
         return properties
     }
-    
-   
 }

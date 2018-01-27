@@ -29,6 +29,12 @@
 		EE306D74201CA23200346105 /* JsonLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D73201CA23200346105 /* JsonLoader.swift */; };
 		EE306D77201CC68200346105 /* LoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE306D75201CC68100346105 /* LoadingViewController.xib */; };
 		EE306D78201CC68200346105 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D76201CC68200346105 /* LoadingViewController.swift */; };
+		EE306D7A201CCDE800346105 /* PropertySortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D79201CCDE800346105 /* PropertySortViewController.swift */; };
+		EE306D7C201CD0D600346105 /* PropertySortConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D7B201CD0D600346105 /* PropertySortConnector.swift */; };
+		EE306D7E201CD1AE00346105 /* PropertySortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D7D201CD1AE00346105 /* PropertySortView.swift */; };
+		EE306D80201CD3E100346105 /* PropertySortPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D7F201CD3E100346105 /* PropertySortPresenter.swift */; };
+		EE306D82201CD9F000346105 /* SortPropertyListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D81201CD9F000346105 /* SortPropertyListUseCase.swift */; };
+		EE306D84201D032200346105 /* URLPropertyFinderConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D83201D032200346105 /* URLPropertyFinderConstructor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +62,12 @@
 		EE306D73201CA23200346105 /* JsonLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonLoader.swift; sourceTree = "<group>"; };
 		EE306D75201CC68100346105 /* LoadingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingViewController.xib; sourceTree = "<group>"; };
 		EE306D76201CC68200346105 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		EE306D79201CCDE800346105 /* PropertySortViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertySortViewController.swift; sourceTree = "<group>"; };
+		EE306D7B201CD0D600346105 /* PropertySortConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertySortConnector.swift; sourceTree = "<group>"; };
+		EE306D7D201CD1AE00346105 /* PropertySortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertySortView.swift; sourceTree = "<group>"; };
+		EE306D7F201CD3E100346105 /* PropertySortPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertySortPresenter.swift; sourceTree = "<group>"; };
+		EE306D81201CD9F000346105 /* SortPropertyListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortPropertyListUseCase.swift; sourceTree = "<group>"; };
+		EE306D83201D032200346105 /* URLPropertyFinderConstructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLPropertyFinderConstructor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				EE306D4E201C76BC00346105 /* ShowPropertiesListUseCase.swift */,
+				EE306D81201CD9F000346105 /* SortPropertyListUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -138,10 +151,11 @@
 		EE306D57201C7FE900346105 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				EE306D6E201C95FF00346105 /* Formatters */,
 				EE306D58201C801500346105 /* PropertyListView.swift */,
 				EE306D5A201C80E100346105 /* PropertyListItemView.swift */,
+				EE306D7D201CD1AE00346105 /* PropertySortView.swift */,
 				EE306D6A201C8B9400346105 /* Presenters */,
+				EE306D6E201C95FF00346105 /* Formatters */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -163,6 +177,7 @@
 				EE306D37201C6BC400346105 /* Main.storyboard */,
 				EE306D45201C6D1400346105 /* PropertyTableViewController.swift */,
 				EE306D60201C82ED00346105 /* PropertyTableViewCell.swift */,
+				EE306D79201CCDE800346105 /* PropertySortViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -207,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				EE306D68201C8B0400346105 /* PropertyListConnector.swift */,
+				EE306D7B201CD0D600346105 /* PropertySortConnector.swift */,
 			);
 			path = Connectors;
 			sourceTree = "<group>";
@@ -215,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				EE306D6B201C8BB100346105 /* PropertyListPresenter.swift */,
+				EE306D7F201CD3E100346105 /* PropertySortPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -231,6 +248,7 @@
 		EE306D6E201C95FF00346105 /* Formatters */ = {
 			isa = PBXGroup;
 			children = (
+				EE306D83201D032200346105 /* URLPropertyFinderConstructor.swift */,
 			);
 			path = Formatters;
 			sourceTree = "<group>";
@@ -313,17 +331,23 @@
 				EE306D59201C801500346105 /* PropertyListView.swift in Sources */,
 				EE306D72201C9D3F00346105 /* InMemoryRepo.swift in Sources */,
 				EE306D61201C82ED00346105 /* PropertyTableViewCell.swift in Sources */,
+				EE306D7E201CD1AE00346105 /* PropertySortView.swift in Sources */,
 				EE306D78201CC68200346105 /* LoadingViewController.swift in Sources */,
 				EE306D74201CA23200346105 /* JsonLoader.swift in Sources */,
 				EE306D4C201C75ED00346105 /* UseCase.swift in Sources */,
+				EE306D82201CD9F000346105 /* SortPropertyListUseCase.swift in Sources */,
 				EE306D70201C9C9C00346105 /* URLImageLoader.swift in Sources */,
 				EE306D4F201C76BC00346105 /* ShowPropertiesListUseCase.swift in Sources */,
+				EE306D84201D032200346105 /* URLPropertyFinderConstructor.swift in Sources */,
+				EE306D7C201CD0D600346105 /* PropertySortConnector.swift in Sources */,
 				EE306D5B201C80E100346105 /* PropertyListItemView.swift in Sources */,
 				EE306D46201C6D1400346105 /* PropertyTableViewController.swift in Sources */,
 				EE306D34201C6BC400346105 /* AppDelegate.swift in Sources */,
 				EE306D5E201C824600346105 /* SegueHandler.swift in Sources */,
+				EE306D7A201CCDE800346105 /* PropertySortViewController.swift in Sources */,
 				EE306D69201C8B0400346105 /* PropertyListConnector.swift in Sources */,
 				EE306D56201C7B7500346105 /* PropertyResponse.swift in Sources */,
+				EE306D80201CD3E100346105 /* PropertySortPresenter.swift in Sources */,
 				EE306D53201C7AE800346105 /* UseCaseFactory.swift in Sources */,
 				EE306D51201C771100346105 /* EntityGateway.swift in Sources */,
 			);

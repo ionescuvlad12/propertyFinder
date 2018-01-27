@@ -30,4 +30,8 @@ class UseCaseFactory {
     func showPropertiesListUseCase(handler: MultiplePropertiesResponsesHandler) -> UseCase {
         return ShowPropertiesListUseCase(entityGateway: entityGateway, handler: handler)
     }
+    
+    func sortPropertiesListUseCases(url:String) -> UseCase {
+        return SortPropertyListUseCase(entityGateway: entityGateway, urlString: url)
+    }
 }

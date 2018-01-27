@@ -10,4 +10,5 @@ import Foundation
 
 protocol EntityGateway {
     func fetchProperties() -> [Property]
+    func sortProperties(with dict: NSDictionary)
 }

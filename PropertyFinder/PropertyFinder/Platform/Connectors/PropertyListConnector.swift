@@ -16,13 +16,14 @@ class PropertyListConnector {
     
     private let entityGateway: EntityGateway
     
+    lazy var propertySortConnectorInit: (EntityGateway) -> PropertySortConnector = { entityGateway in
+        return PropertySortConnector(entityGateway: entityGateway)
+    }
     // MARK: - Initializer
     
     init(entityGateway: EntityGateway) {
         self.entityGateway = entityGateway
     }
-    
-    
     // MARK: - Dependency injection
     
     func assembleModule(view: PropertyTableViewController) {
@@ -31,6 +32,12 @@ class PropertyListConnector {
         view.presenter = presenter
         view.connector = self
         presenter.view = view
+    }
+    // MARK: - Navigation
+    func navigateToSortProperty(viewController: UIViewController) {
+        let propertySortViewController = viewController as! PropertySortViewController
+        let connector = propertySortConnectorInit(entityGateway)
+        connector.assembleModule(view: propertySortViewController)
     }
 }
 

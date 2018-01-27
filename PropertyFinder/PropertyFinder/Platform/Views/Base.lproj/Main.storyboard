@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -69,11 +70,80 @@
                             <outlet property="delegate" destination="IRb-dv-7CW" id="Vmt-cR-wvL"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="fqi-dP-LPw"/>
+                    <navigationItem key="navigationItem" id="fqi-dP-LPw">
+                        <barButtonItem key="rightBarButtonItem" title="Sort" id="Cj7-wb-49H">
+                            <connections>
+                                <action selector="sort:" destination="IRb-dv-7CW" id="gHd-Oc-WWs"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="sortButton" destination="Cj7-wb-49H" id="Gej-Pk-Sdx"/>
+                        <segue destination="pcR-7b-VP5" kind="show" identifier="SortProperty" id="P8R-bK-w0b"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7pv-fD-SQq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="528.5" y="112.5"/>
+        </scene>
+        <!--Property Sort View Controller-->
+        <scene sceneID="W6F-pe-20y">
+            <objects>
+                <viewController id="pcR-7b-VP5" customClass="PropertySortViewController" customModule="PropertyFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VcE-Eh-dwc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9P-PL-tph">
+                                <rect key="frame" x="127.5" y="270.5" width="119" height="30"/>
+                                <state key="normal" title="Price descending"/>
+                                <connections>
+                                    <action selector="priceDescending:" destination="pcR-7b-VP5" eventType="touchUpInside" id="AIN-oA-vJV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BhW-tF-sAB">
+                                <rect key="frame" x="132" y="325.5" width="110" height="30"/>
+                                <state key="normal" title="Price ascending"/>
+                                <connections>
+                                    <action selector="priceAscending:" destination="pcR-7b-VP5" eventType="touchUpInside" id="E71-SC-K6G"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkq-GM-wMV">
+                                <rect key="frame" x="127.5" y="375.5" width="119" height="30"/>
+                                <state key="normal" title="Beds descending"/>
+                                <connections>
+                                    <action selector="bedsDescending:" destination="pcR-7b-VP5" eventType="touchUpInside" id="xNL-3h-P3Y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHM-AX-DpF">
+                                <rect key="frame" x="132" y="430.5" width="110" height="30"/>
+                                <state key="normal" title="Beds ascending"/>
+                                <connections>
+                                    <action selector="bedsAscending:" destination="pcR-7b-VP5" eventType="touchUpInside" id="I4V-JN-Blr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="BhW-tF-sAB" firstAttribute="top" secondItem="E9P-PL-tph" secondAttribute="bottom" constant="25" id="EmH-5D-WKC"/>
+                            <constraint firstItem="bkq-GM-wMV" firstAttribute="centerY" secondItem="xFL-0y-eCN" secondAttribute="centerY" constant="25" id="GYK-q6-dGJ"/>
+                            <constraint firstItem="bkq-GM-wMV" firstAttribute="centerX" secondItem="xFL-0y-eCN" secondAttribute="centerX" id="JNC-1M-T2g"/>
+                            <constraint firstItem="BhW-tF-sAB" firstAttribute="centerY" secondItem="xFL-0y-eCN" secondAttribute="centerY" constant="-25" id="MdS-c4-btj"/>
+                            <constraint firstItem="E9P-PL-tph" firstAttribute="centerX" secondItem="xFL-0y-eCN" secondAttribute="centerX" id="Z9r-6m-gvN"/>
+                            <constraint firstItem="sHM-AX-DpF" firstAttribute="top" secondItem="bkq-GM-wMV" secondAttribute="bottom" constant="25" id="m0L-yW-fmV"/>
+                            <constraint firstItem="sHM-AX-DpF" firstAttribute="centerX" secondItem="xFL-0y-eCN" secondAttribute="centerX" id="qte-KD-n6c"/>
+                            <constraint firstItem="BhW-tF-sAB" firstAttribute="centerX" secondItem="xFL-0y-eCN" secondAttribute="centerX" id="t1e-f4-w0D"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xFL-0y-eCN"/>
+                    </view>
+                    <connections>
+                        <segue destination="cBa-ij-7ai" kind="unwind" identifier="UnwindToPropertyList" unwindAction="unwindToPropertyListWithSegue:" id="f3T-iY-JgO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dP5-4M-kiv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="cBa-ij-7ai" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1448.8" y="111.99400299850076"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QAg-Uh-y7x">
