@@ -14,6 +14,10 @@
 		EE306D46201C6D1400346105 /* PropertyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D45201C6D1400346105 /* PropertyTableViewController.swift */; };
 		EE306D4A201C735F00346105 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D49201C735F00346105 /* Property.swift */; };
 		EE306D4C201C75ED00346105 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D4B201C75ED00346105 /* UseCase.swift */; };
+		EE306D4F201C76BC00346105 /* ShowPropertiesListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D4E201C76BC00346105 /* ShowPropertiesListUseCase.swift */; };
+		EE306D51201C771100346105 /* EntityGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D50201C771100346105 /* EntityGateway.swift */; };
+		EE306D53201C7AE800346105 /* UseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D52201C7AE800346105 /* UseCaseFactory.swift */; };
+		EE306D56201C7B7500346105 /* PropertyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D55201C7B7500346105 /* PropertyResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		EE306D45201C6D1400346105 /* PropertyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyTableViewController.swift; sourceTree = "<group>"; };
 		EE306D49201C735F00346105 /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
 		EE306D4B201C75ED00346105 /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
+		EE306D4E201C76BC00346105 /* ShowPropertiesListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPropertiesListUseCase.swift; sourceTree = "<group>"; };
+		EE306D50201C771100346105 /* EntityGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityGateway.swift; sourceTree = "<group>"; };
+		EE306D52201C7AE800346105 /* UseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseFactory.swift; sourceTree = "<group>"; };
+		EE306D55201C7B7500346105 /* PropertyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +81,11 @@
 			isa = PBXGroup;
 			children = (
 				EE306D4B201C75ED00346105 /* UseCase.swift */,
+				EE306D52201C7AE800346105 /* UseCaseFactory.swift */,
+				EE306D50201C771100346105 /* EntityGateway.swift */,
+				EE306D4D201C763900346105 /* UseCases */,
 				EE306D48201C733C00346105 /* Entities */,
+				EE306D54201C7B4400346105 /* IO */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -84,6 +96,22 @@
 				EE306D49201C735F00346105 /* Property.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		EE306D4D201C763900346105 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				EE306D4E201C76BC00346105 /* ShowPropertiesListUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		EE306D54201C7B4400346105 /* IO */ = {
+			isa = PBXGroup;
+			children = (
+				EE306D55201C7B7500346105 /* PropertyResponse.swift */,
+			);
+			path = IO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,8 +188,12 @@
 			files = (
 				EE306D4A201C735F00346105 /* Property.swift in Sources */,
 				EE306D4C201C75ED00346105 /* UseCase.swift in Sources */,
+				EE306D4F201C76BC00346105 /* ShowPropertiesListUseCase.swift in Sources */,
 				EE306D46201C6D1400346105 /* PropertyTableViewController.swift in Sources */,
 				EE306D34201C6BC400346105 /* AppDelegate.swift in Sources */,
+				EE306D56201C7B7500346105 /* PropertyResponse.swift in Sources */,
+				EE306D53201C7AE800346105 /* UseCaseFactory.swift in Sources */,
+				EE306D51201C771100346105 /* EntityGateway.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
