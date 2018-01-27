@@ -9,12 +9,12 @@
 import Foundation
 
 class SortPropertyListUseCase {
-    // MARK: - Properties
     
+    // MARK: - Properties
     private let entityGateway: EntityGateway
     private let urlString:String
-    // MARK: - Initializer
     
+    // MARK: - Initializer
     init(entityGateway: EntityGateway, urlString:String) {
         self.entityGateway = entityGateway
         self.urlString = urlString

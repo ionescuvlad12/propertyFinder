@@ -10,6 +10,7 @@ import Foundation
 
 protocol MultiplePropertiesResponsesHandler: class {
     func handleMultiplePropertiesResponses(properties: [PropertyResponse])
+    func appendMultiplePropertiesResponses(properties: [PropertyResponse])
 }
 
 class UseCaseFactory {
@@ -33,5 +34,9 @@ class UseCaseFactory {
     
     func sortPropertiesListUseCases(url:String) -> UseCase {
         return SortPropertyListUseCase(entityGateway: entityGateway, urlString: url)
+    }
+    
+    func showNextPage(pageNumber: Int, handler: MultiplePropertiesResponsesHandler) -> UseCase {
+        return ShowNextPropertyPageUseCase(entityGateway: entityGateway, pageNumber: pageNumber, handler: handler)
     }
 }

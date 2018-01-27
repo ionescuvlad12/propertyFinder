@@ -9,7 +9,7 @@
 import UIKit
 
 class PropertySortViewController: UIViewController, UnwindSegueHandler {
-
+    
     enum SortType:String {
         case priceDescinding = "pd"
         case priceAscending = "pa"
@@ -39,9 +39,10 @@ class PropertySortViewController: UIViewController, UnwindSegueHandler {
     
     // "Upon tapping one of the 4 sort option buttons and pressing back, the properties list should now be sorted in the order that was chosen."
     @objc func back(sender: UIBarButtonItem) {
-        if sortType != nil {
+        if let sortType = self.sortType {
             showLoadingView()
-            let url = URLPropertyFinderConstructor.createURL(withOrder: sortType?.rawValue, andPageNumber: 0)
+            URLManager.sharedInstance.order = sortType.rawValue
+            let url = URLManager.sharedInstance.createURLWith(pageNumber: 0)
             presenter.sort(urlString: url) {
                 self.loadingView.hideLoadingView()
                 self.navigationController?.popViewController(animated: true)
@@ -64,18 +65,17 @@ class PropertySortViewController: UIViewController, UnwindSegueHandler {
         sortType = .priceDescinding
     }
     @IBAction func priceAscending(_ sender: Any) {
-         sortType = .priceAscending
+        sortType = .priceAscending
     }
     @IBAction func bedsDescending(_ sender: Any) {
-         sortType = .bedsDescending
+        sortType = .bedsDescending
     }
     
     @IBAction func bedsAscending(_ sender: Any) {
-         sortType = .bedsAscending
+        sortType = .bedsAscending
     }
 }
 extension PropertySortViewController: PropertySortView {
-    
     func dismiss() {
         performSegue(withIdentifier: UnwindSegueIdentifier.toPropertyLists, sender: self)
     }

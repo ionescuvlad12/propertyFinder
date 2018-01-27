@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 struct PropertyResponse {
-    let id: String
+    let id: Int
     let price: Double
     let beds: Int
     // usualy we should have only primitives and the response should not know about UIKit, but in this case we consider UIImage as a primitive, we could also load it in viewController

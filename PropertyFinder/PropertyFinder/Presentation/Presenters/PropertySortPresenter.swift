@@ -13,7 +13,7 @@ class PropertySortPresenter {
     
     weak var view: PropertySortView!
     private var useCaseFactory: UseCaseFactory
- 
+    
     // MARK: - Initializer
     
     init(useCaseFactory: UseCaseFactory) {

@@ -21,7 +21,7 @@ class JsonLoader {
                 
                 //printing the json in console
                 print(jsonObj as Any)
-               dict = jsonObj
+                dict = jsonObj
                 completion(dict)
             }
         }).resume()

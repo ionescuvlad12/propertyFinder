@@ -12,4 +12,5 @@ import Foundation
 protocol PropertyListView: class {
     func refresh()
     func navigateToSortPropery()
+    func appendRows()
 }

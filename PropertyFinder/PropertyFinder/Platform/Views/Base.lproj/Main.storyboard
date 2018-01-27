@@ -78,7 +78,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="sortButton" destination="Cj7-wb-49H" id="Gej-Pk-Sdx"/>
                         <segue destination="pcR-7b-VP5" kind="show" identifier="SortProperty" id="P8R-bK-w0b"/>
                     </connections>
                 </tableViewController>

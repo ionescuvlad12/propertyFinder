@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+
 protocol PropertyListItemView {
     func display(thumbnailImage: UIImage)
     func display(price: Double)

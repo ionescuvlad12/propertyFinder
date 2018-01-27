@@ -16,6 +16,8 @@ class PropertyListPresenter {
     var numberOfProperties: Int {
         return properties.count
     }
+    var pageNumber: Int = 0
+    
     private var properties = [PropertyResponse]()
     
     
@@ -31,8 +33,7 @@ class PropertyListPresenter {
     
     private func executeShowPropertiesListUseCase() {
         let useCase = useCaseFactory.showPropertiesListUseCase(handler: self)
-        useCase.execute { (success) in
-        }
+        useCase.execute { (success) in }
     }
     
     func configure(cell: PropertyListItemView, forRow row: Int) {
@@ -49,9 +50,24 @@ class PropertyListPresenter {
     func dataChanged() {
         executeShowPropertiesListUseCase()
     }
+    
+    func fetchNextPage() {
+        // increase the page number
+        pageNumber = pageNumber + 1
+        let useCase = useCaseFactory.showNextPage(pageNumber: pageNumber, handler: self)
+        useCase.execute { (success) in}
+    }
 }
 
 extension PropertyListPresenter: MultiplePropertiesResponsesHandler {
+    func appendMultiplePropertiesResponses(properties: [PropertyResponse]) {
+        let oldNumberOfProperies = properties.count
+        self.properties.append(contentsOf: properties)
+        DispatchQueue.main.async {
+            self.view.appendRows()
+        }
+    }
+    
     func handleMultiplePropertiesResponses(properties: [PropertyResponse]) {
         self.properties = properties
         DispatchQueue.main.async {

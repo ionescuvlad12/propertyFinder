@@ -9,7 +9,7 @@
 import UIKit
 
 class PropertyTableViewCell: UITableViewCell {
-
+    
     static let ID = "PropertyCell"
     
     @IBOutlet weak var thumbnailImageView: UIImageView!
@@ -19,15 +19,15 @@ class PropertyTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-
+        
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
-
+    
 }
 extension PropertyTableViewCell: PropertyListItemView {
     func display(price: Double) {
@@ -41,8 +41,4 @@ extension PropertyTableViewCell: PropertyListItemView {
     func display(thumbnailImage: UIImage) {
         thumbnailImageView.image = thumbnailImage
     }
-    
-    
-    
-    
 }

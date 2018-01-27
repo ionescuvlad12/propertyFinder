@@ -34,7 +34,8 @@
 		EE306D7E201CD1AE00346105 /* PropertySortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D7D201CD1AE00346105 /* PropertySortView.swift */; };
 		EE306D80201CD3E100346105 /* PropertySortPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D7F201CD3E100346105 /* PropertySortPresenter.swift */; };
 		EE306D82201CD9F000346105 /* SortPropertyListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D81201CD9F000346105 /* SortPropertyListUseCase.swift */; };
-		EE306D84201D032200346105 /* URLPropertyFinderConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D83201D032200346105 /* URLPropertyFinderConstructor.swift */; };
+		EE306D84201D032200346105 /* URLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D83201D032200346105 /* URLManager.swift */; };
+		EE306D86201D1CA200346105 /* ShowNextPropertyPageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D85201D1CA200346105 /* ShowNextPropertyPageUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,7 +68,8 @@
 		EE306D7D201CD1AE00346105 /* PropertySortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertySortView.swift; sourceTree = "<group>"; };
 		EE306D7F201CD3E100346105 /* PropertySortPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertySortPresenter.swift; sourceTree = "<group>"; };
 		EE306D81201CD9F000346105 /* SortPropertyListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortPropertyListUseCase.swift; sourceTree = "<group>"; };
-		EE306D83201D032200346105 /* URLPropertyFinderConstructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLPropertyFinderConstructor.swift; sourceTree = "<group>"; };
+		EE306D83201D032200346105 /* URLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLManager.swift; sourceTree = "<group>"; };
+		EE306D85201D1CA200346105 /* ShowNextPropertyPageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowNextPropertyPageUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 			children = (
 				EE306D4E201C76BC00346105 /* ShowPropertiesListUseCase.swift */,
 				EE306D81201CD9F000346105 /* SortPropertyListUseCase.swift */,
+				EE306D85201D1CA200346105 /* ShowNextPropertyPageUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 				EE306D5A201C80E100346105 /* PropertyListItemView.swift */,
 				EE306D7D201CD1AE00346105 /* PropertySortView.swift */,
 				EE306D6A201C8B9400346105 /* Presenters */,
+				EE306D87201D250B00346105 /* Singleton */,
 				EE306D6E201C95FF00346105 /* Formatters */,
 			);
 			path = Presentation;
@@ -248,9 +252,16 @@
 		EE306D6E201C95FF00346105 /* Formatters */ = {
 			isa = PBXGroup;
 			children = (
-				EE306D83201D032200346105 /* URLPropertyFinderConstructor.swift */,
 			);
 			path = Formatters;
+			sourceTree = "<group>";
+		};
+		EE306D87201D250B00346105 /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				EE306D83201D032200346105 /* URLManager.swift */,
+			);
+			path = Singleton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,7 +349,7 @@
 				EE306D82201CD9F000346105 /* SortPropertyListUseCase.swift in Sources */,
 				EE306D70201C9C9C00346105 /* URLImageLoader.swift in Sources */,
 				EE306D4F201C76BC00346105 /* ShowPropertiesListUseCase.swift in Sources */,
-				EE306D84201D032200346105 /* URLPropertyFinderConstructor.swift in Sources */,
+				EE306D84201D032200346105 /* URLManager.swift in Sources */,
 				EE306D7C201CD0D600346105 /* PropertySortConnector.swift in Sources */,
 				EE306D5B201C80E100346105 /* PropertyListItemView.swift in Sources */,
 				EE306D46201C6D1400346105 /* PropertyTableViewController.swift in Sources */,
@@ -346,6 +357,7 @@
 				EE306D5E201C824600346105 /* SegueHandler.swift in Sources */,
 				EE306D7A201CCDE800346105 /* PropertySortViewController.swift in Sources */,
 				EE306D69201C8B0400346105 /* PropertyListConnector.swift in Sources */,
+				EE306D86201D1CA200346105 /* ShowNextPropertyPageUseCase.swift in Sources */,
 				EE306D56201C7B7500346105 /* PropertyResponse.swift in Sources */,
 				EE306D80201CD3E100346105 /* PropertySortPresenter.swift in Sources */,
 				EE306D53201C7AE800346105 /* UseCaseFactory.swift in Sources */,

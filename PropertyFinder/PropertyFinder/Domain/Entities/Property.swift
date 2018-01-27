@@ -9,7 +9,7 @@
 import Foundation
 
 struct Property {
-    let id: String
+    let id: Int
     let thumbnailURL: String
     let price: Double
     let beds: Int
