@@ -10,7 +10,7 @@ import Foundation
 
 struct Property {
     let id: String
-    let thumbNailURL: String
+    let thumbnailURL: String
     let price: Double
     let beds: Int
 }

@@ -18,11 +18,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="306" id="ftn-Py-Bdb">
-                                <rect key="frame" x="0.0" y="28" width="375" height="306"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PropertyCell" rowHeight="270" id="ftn-Py-Bdb" customClass="PropertyTableViewCell" customModule="PropertyFinder" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="270"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ftn-Py-Bdb" id="IDA-AO-EbD">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="305.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="269.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zgO-tp-UgC">
@@ -50,12 +50,18 @@
                                         <constraint firstItem="864-Mx-x0Z" firstAttribute="top" secondItem="HHU-ex-yhE" secondAttribute="bottom" constant="8" id="LCk-1y-ShO"/>
                                         <constraint firstItem="HHU-ex-yhE" firstAttribute="leading" secondItem="IDA-AO-EbD" secondAttribute="leading" constant="16" id="OpP-Vu-Etj"/>
                                         <constraint firstItem="zgO-tp-UgC" firstAttribute="top" secondItem="IDA-AO-EbD" secondAttribute="top" constant="11" id="W5R-G2-cmt"/>
+                                        <constraint firstAttribute="bottom" secondItem="864-Mx-x0Z" secondAttribute="bottom" constant="11.5" id="YRa-1n-XLy"/>
                                         <constraint firstItem="zgO-tp-UgC" firstAttribute="centerX" secondItem="IDA-AO-EbD" secondAttribute="centerX" id="c5p-om-8Sv"/>
                                         <constraint firstItem="864-Mx-x0Z" firstAttribute="leading" secondItem="IDA-AO-EbD" secondAttribute="leading" constant="16" id="slT-lA-IPZ"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="864-Mx-x0Z" secondAttribute="trailing" constant="20" symbolic="YES" id="tPr-ER-J1o"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HHU-ex-yhE" secondAttribute="trailing" constant="20" symbolic="YES" id="ySZ-16-ndj"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="badsLabel" destination="864-Mx-x0Z" id="utZ-gr-EfK"/>
+                                    <outlet property="priceLabel" destination="HHU-ex-yhE" id="KVl-vV-5kx"/>
+                                    <outlet property="thumbnailImageView" destination="zgO-tp-UgC" id="bOD-0y-RbD"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -67,7 +73,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7pv-fD-SQq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="528.79999999999995" y="112.89355322338831"/>
+            <point key="canvasLocation" x="528.5" y="112.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QAg-Uh-y7x">

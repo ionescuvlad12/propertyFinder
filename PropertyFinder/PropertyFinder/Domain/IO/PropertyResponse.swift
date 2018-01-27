@@ -7,19 +7,21 @@
 //
 
 import Foundation
+import UIKit
 
 struct PropertyResponse {
     let id: String
-    let thumbNailURL: String
     let price: Double
     let beds: Int
+    // usualy we should have only primitives and the response should not know about UIKit, but in this case we consider UIImage as a primitive, we could also load it in viewController
+    let thumbnailImage:UIImage
 }
 
 extension PropertyResponse {
     init(property: Property) {
         id = property.id
         price = property.price
-        thumbNailURL = property.thumbNailURL
+        thumbnailImage = URLImageLoader.getImageFrom(urlString: property.thumbnailURL)
         beds = property.beds
     }
 }

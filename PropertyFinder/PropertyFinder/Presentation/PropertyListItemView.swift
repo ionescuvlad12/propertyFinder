@@ -7,9 +7,9 @@
 //
 
 import Foundation
-
+import UIKit
 protocol PropertyListItemView {
-    func display(thumbnailUrl: String)
+    func display(thumbnailImage: UIImage)
     func display(price: Double)
     func display(beds: Int)
 }
