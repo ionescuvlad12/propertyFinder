@@ -18,12 +18,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ftn-Py-Bdb">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="306" id="ftn-Py-Bdb">
+                                <rect key="frame" x="0.0" y="28" width="375" height="306"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ftn-Py-Bdb" id="IDA-AO-EbD">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="305.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zgO-tp-UgC">
+                                            <rect key="frame" x="0.0" y="11" width="375" height="189"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="189" id="eob-4a-JH9"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HHU-ex-yhE">
+                                            <rect key="frame" x="16" y="208" width="39" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="864-Mx-x0Z">
+                                            <rect key="frame" x="16" y="237" width="39" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="HHU-ex-yhE" firstAttribute="top" secondItem="zgO-tp-UgC" secondAttribute="bottom" constant="8" id="GGm-5l-OSw"/>
+                                        <constraint firstItem="zgO-tp-UgC" firstAttribute="width" secondItem="IDA-AO-EbD" secondAttribute="width" id="JqR-He-KEM"/>
+                                        <constraint firstItem="864-Mx-x0Z" firstAttribute="top" secondItem="HHU-ex-yhE" secondAttribute="bottom" constant="8" id="LCk-1y-ShO"/>
+                                        <constraint firstItem="HHU-ex-yhE" firstAttribute="leading" secondItem="IDA-AO-EbD" secondAttribute="leading" constant="16" id="OpP-Vu-Etj"/>
+                                        <constraint firstItem="zgO-tp-UgC" firstAttribute="top" secondItem="IDA-AO-EbD" secondAttribute="top" constant="11" id="W5R-G2-cmt"/>
+                                        <constraint firstItem="zgO-tp-UgC" firstAttribute="centerX" secondItem="IDA-AO-EbD" secondAttribute="centerX" id="c5p-om-8Sv"/>
+                                        <constraint firstItem="864-Mx-x0Z" firstAttribute="leading" secondItem="IDA-AO-EbD" secondAttribute="leading" constant="16" id="slT-lA-IPZ"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="864-Mx-x0Z" secondAttribute="trailing" constant="20" symbolic="YES" id="tPr-ER-J1o"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HHU-ex-yhE" secondAttribute="trailing" constant="20" symbolic="YES" id="ySZ-16-ndj"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>

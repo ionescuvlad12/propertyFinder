@@ -18,6 +18,8 @@
 		EE306D51201C771100346105 /* EntityGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D50201C771100346105 /* EntityGateway.swift */; };
 		EE306D53201C7AE800346105 /* UseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D52201C7AE800346105 /* UseCaseFactory.swift */; };
 		EE306D56201C7B7500346105 /* PropertyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D55201C7B7500346105 /* PropertyResponse.swift */; };
+		EE306D59201C801500346105 /* PropertyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D58201C801500346105 /* PropertyListView.swift */; };
+		EE306D5B201C80E100346105 /* PropertyListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D5A201C80E100346105 /* PropertyListItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		EE306D50201C771100346105 /* EntityGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityGateway.swift; sourceTree = "<group>"; };
 		EE306D52201C7AE800346105 /* UseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseFactory.swift; sourceTree = "<group>"; };
 		EE306D55201C7B7500346105 /* PropertyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyResponse.swift; sourceTree = "<group>"; };
+		EE306D58201C801500346105 /* PropertyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListView.swift; sourceTree = "<group>"; };
+		EE306D5A201C80E100346105 /* PropertyListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +54,7 @@
 		EE306D27201C6BC400346105 = {
 			isa = PBXGroup;
 			children = (
+				EE306D57201C7FE900346105 /* Presentation */,
 				EE306D32201C6BC400346105 /* PropertyFinder */,
 				EE306D31201C6BC400346105 /* Products */,
 			);
@@ -112,6 +117,15 @@
 				EE306D55201C7B7500346105 /* PropertyResponse.swift */,
 			);
 			path = IO;
+			sourceTree = "<group>";
+		};
+		EE306D57201C7FE900346105 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				EE306D58201C801500346105 /* PropertyListView.swift */,
+				EE306D5A201C80E100346105 /* PropertyListItemView.swift */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,8 +201,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE306D4A201C735F00346105 /* Property.swift in Sources */,
+				EE306D59201C801500346105 /* PropertyListView.swift in Sources */,
 				EE306D4C201C75ED00346105 /* UseCase.swift in Sources */,
 				EE306D4F201C76BC00346105 /* ShowPropertiesListUseCase.swift in Sources */,
+				EE306D5B201C80E100346105 /* PropertyListItemView.swift in Sources */,
 				EE306D46201C6D1400346105 /* PropertyTableViewController.swift in Sources */,
 				EE306D34201C6BC400346105 /* AppDelegate.swift in Sources */,
 				EE306D56201C7B7500346105 /* PropertyResponse.swift in Sources */,
