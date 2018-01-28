@@ -39,6 +39,7 @@
 		EE306D8F201D512B00346105 /* PropertyFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D8E201D512B00346105 /* PropertyFinderTests.swift */; };
 		EE306D99201DC51300346105 /* PropertyListConnectorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D98201DC51300346105 /* PropertyListConnectorTest.swift */; };
 		EE306D9C201DC61900346105 /* EntityGatewayTestDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D9B201DC61900346105 /* EntityGatewayTestDummy.swift */; };
+		EE306D9E201DCD6500346105 /* PropertySortConnectorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D9D201DCD6500346105 /* PropertySortConnectorTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		EE306D90201D512B00346105 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE306D98201DC51300346105 /* PropertyListConnectorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListConnectorTest.swift; sourceTree = "<group>"; };
 		EE306D9B201DC61900346105 /* EntityGatewayTestDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityGatewayTestDummy.swift; sourceTree = "<group>"; };
+		EE306D9D201DCD6500346105 /* PropertySortConnectorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertySortConnectorTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -314,6 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				EE306D98201DC51300346105 /* PropertyListConnectorTest.swift */,
+				EE306D9D201DCD6500346105 /* PropertySortConnectorTest.swift */,
 			);
 			path = Connectors;
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 			files = (
 				EE306D99201DC51300346105 /* PropertyListConnectorTest.swift in Sources */,
 				EE306D8F201D512B00346105 /* PropertyFinderTests.swift in Sources */,
+				EE306D9E201DCD6500346105 /* PropertySortConnectorTest.swift in Sources */,
 				EE306D9C201DC61900346105 /* EntityGatewayTestDummy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
