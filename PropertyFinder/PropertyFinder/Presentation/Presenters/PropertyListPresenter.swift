@@ -70,7 +70,9 @@ extension PropertyListPresenter: MultiplePropertiesResponsesHandler {
     func handleMultiplePropertiesResponses(properties: [PropertyResponse]) {
         self.properties = properties
         DispatchQueue.main.async {
-            self.view.refresh()
+            if self.view != nil {
+                self.view.refresh()
+            }
         }
     }
 }
