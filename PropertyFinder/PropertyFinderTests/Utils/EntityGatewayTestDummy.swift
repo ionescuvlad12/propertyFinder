@@ -12,6 +12,7 @@ import Foundation
 
 
 class EntityGatewayTestDummy: EntityGateway {
+    
     func fetchProperties() -> [Property] {
         return []
     }

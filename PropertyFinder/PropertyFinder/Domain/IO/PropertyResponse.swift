@@ -9,12 +9,17 @@
 import Foundation
 import UIKit
 
-struct PropertyResponse {
+struct PropertyResponse: Equatable {
     let id: Int
     let price: Double
     let beds: Int
     // usualy we should have only primitives and the response should not know about UIKit, but in this case we consider UIImage as a primitive, we could also load it in viewController
     let thumbnailImage:UIImage
+    
+    static func ==(lhs: PropertyResponse, rhs: PropertyResponse) -> Bool {
+        if lhs.id != rhs.id { return false }
+        return true
+    }
 }
 
 extension PropertyResponse {

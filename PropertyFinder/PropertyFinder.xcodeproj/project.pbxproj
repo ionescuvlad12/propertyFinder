@@ -43,6 +43,10 @@
 		EE306DA1201DD47000346105 /* PropertyTableViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306DA0201DD47000346105 /* PropertyTableViewControllerTest.swift */; };
 		EE306DA3201DE9DE00346105 /* PropertyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306DA2201DE9DE00346105 /* PropertyTableViewCell.swift */; };
 		EE306DA5201DEAA700346105 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306DA4201DEAA700346105 /* TestData.swift */; };
+		EE306DAA201DF6F800346105 /* UseCaseFactoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306DA9201DF6F800346105 /* UseCaseFactoryTest.swift */; };
+		EE306DAD201DF90F00346105 /* ShowPropertyListUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306DAC201DF90F00346105 /* ShowPropertyListUseCaseTest.swift */; };
+		EE306DAF201DFB8900346105 /* PropertyResponse+TestConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306DAE201DFB8900346105 /* PropertyResponse+TestConvenience.swift */; };
+		EE306DB1201DFC6800346105 /* Property+TestConviniance.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306DB0201DFC6800346105 /* Property+TestConviniance.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +100,10 @@
 		EE306DA0201DD47000346105 /* PropertyTableViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyTableViewControllerTest.swift; sourceTree = "<group>"; };
 		EE306DA2201DE9DE00346105 /* PropertyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyTableViewCell.swift; sourceTree = "<group>"; };
 		EE306DA4201DEAA700346105 /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
+		EE306DA9201DF6F800346105 /* UseCaseFactoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseFactoryTest.swift; sourceTree = "<group>"; };
+		EE306DAC201DF90F00346105 /* ShowPropertyListUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPropertyListUseCaseTest.swift; sourceTree = "<group>"; };
+		EE306DAE201DFB8900346105 /* PropertyResponse+TestConvenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PropertyResponse+TestConvenience.swift"; sourceTree = "<group>"; };
+		EE306DB0201DFC6800346105 /* Property+TestConviniance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Property+TestConviniance.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -302,6 +310,7 @@
 		EE306D8D201D512B00346105 /* PropertyFinderTests */ = {
 			isa = PBXGroup;
 			children = (
+				EE306DA8201DF6D000346105 /* Domain */,
 				EE306D96201DC46900346105 /* Platform */,
 				EE306D8E201D512B00346105 /* PropertyFinderTests.swift */,
 				EE306D90201D512B00346105 /* Info.plist */,
@@ -333,6 +342,8 @@
 			children = (
 				EE306D9B201DC61900346105 /* EntityGatewayTestDummy.swift */,
 				EE306DA4201DEAA700346105 /* TestData.swift */,
+				EE306DAE201DFB8900346105 /* PropertyResponse+TestConvenience.swift */,
+				EE306DB0201DFC6800346105 /* Property+TestConviniance.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -344,6 +355,23 @@
 				EE306DA2201DE9DE00346105 /* PropertyTableViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		EE306DA8201DF6D000346105 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EE306DAB201DF8E300346105 /* Entities */,
+				EE306DA9201DF6F800346105 /* UseCaseFactoryTest.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EE306DAB201DF8E300346105 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				EE306DAC201DF90F00346105 /* ShowPropertyListUseCaseTest.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -485,8 +513,12 @@
 				EE306D99201DC51300346105 /* PropertyListConnectorTest.swift in Sources */,
 				EE306DA1201DD47000346105 /* PropertyTableViewControllerTest.swift in Sources */,
 				EE306DA3201DE9DE00346105 /* PropertyTableViewCell.swift in Sources */,
+				EE306DAF201DFB8900346105 /* PropertyResponse+TestConvenience.swift in Sources */,
 				EE306D8F201D512B00346105 /* PropertyFinderTests.swift in Sources */,
+				EE306DAA201DF6F800346105 /* UseCaseFactoryTest.swift in Sources */,
 				EE306D9E201DCD6500346105 /* PropertySortConnectorTest.swift in Sources */,
+				EE306DB1201DFC6800346105 /* Property+TestConviniance.swift in Sources */,
+				EE306DAD201DF90F00346105 /* ShowPropertyListUseCaseTest.swift in Sources */,
 				EE306DA5201DEAA700346105 /* TestData.swift in Sources */,
 				EE306D9C201DC61900346105 /* EntityGatewayTestDummy.swift in Sources */,
 			);
