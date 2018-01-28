@@ -24,7 +24,11 @@ class SortPropertyListUseCase {
 extension SortPropertyListUseCase: UseCase {
     func execute(completion: @escaping (Bool) -> Void) {
         JsonLoader.getJsonFrom(urlString: urlString) { (dict) in
-            self.entityGateway.sortProperties(with: dict!)
+            guard let dicitionary = dict else {
+                completion(false)
+                return
+            }
+            self.entityGateway.sortProperties(with: dicitionary)
             completion(true)
         }
     }

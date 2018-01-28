@@ -36,7 +36,18 @@
 		EE306D82201CD9F000346105 /* SortPropertyListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D81201CD9F000346105 /* SortPropertyListUseCase.swift */; };
 		EE306D84201D032200346105 /* URLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D83201D032200346105 /* URLManager.swift */; };
 		EE306D86201D1CA200346105 /* ShowNextPropertyPageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D85201D1CA200346105 /* ShowNextPropertyPageUseCase.swift */; };
+		EE306D8F201D512B00346105 /* PropertyFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D8E201D512B00346105 /* PropertyFinderTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE306D91201D512B00346105 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE306D28201C6BC400346105 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE306D2F201C6BC400346105;
+			remoteInfo = PropertyFinder;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		EE306D30201C6BC400346105 /* PropertyFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PropertyFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,10 +81,20 @@
 		EE306D81201CD9F000346105 /* SortPropertyListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortPropertyListUseCase.swift; sourceTree = "<group>"; };
 		EE306D83201D032200346105 /* URLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLManager.swift; sourceTree = "<group>"; };
 		EE306D85201D1CA200346105 /* ShowNextPropertyPageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowNextPropertyPageUseCase.swift; sourceTree = "<group>"; };
+		EE306D8C201D512B00346105 /* PropertyFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PropertyFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE306D8E201D512B00346105 /* PropertyFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyFinderTests.swift; sourceTree = "<group>"; };
+		EE306D90201D512B00346105 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		EE306D2D201C6BC400346105 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE306D89201D512B00346105 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -87,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				EE306D32201C6BC400346105 /* PropertyFinder */,
+				EE306D8D201D512B00346105 /* PropertyFinderTests */,
 				EE306D31201C6BC400346105 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				EE306D30201C6BC400346105 /* PropertyFinder.app */,
+				EE306D8C201D512B00346105 /* PropertyFinderTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -264,6 +287,15 @@
 			path = Singleton;
 			sourceTree = "<group>";
 		};
+		EE306D8D201D512B00346105 /* PropertyFinderTests */ = {
+			isa = PBXGroup;
+			children = (
+				EE306D8E201D512B00346105 /* PropertyFinderTests.swift */,
+				EE306D90201D512B00346105 /* Info.plist */,
+			);
+			path = PropertyFinderTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -284,6 +316,24 @@
 			productReference = EE306D30201C6BC400346105 /* PropertyFinder.app */;
 			productType = "com.apple.product-type.application";
 		};
+		EE306D8B201D512B00346105 /* PropertyFinderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE306D93201D512B00346105 /* Build configuration list for PBXNativeTarget "PropertyFinderTests" */;
+			buildPhases = (
+				EE306D88201D512B00346105 /* Sources */,
+				EE306D89201D512B00346105 /* Frameworks */,
+				EE306D8A201D512B00346105 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE306D92201D512B00346105 /* PBXTargetDependency */,
+			);
+			name = PropertyFinderTests;
+			productName = PropertyFinderTests;
+			productReference = EE306D8C201D512B00346105 /* PropertyFinderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -297,6 +347,11 @@
 					EE306D2F201C6BC400346105 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+					};
+					EE306D8B201D512B00346105 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EE306D2F201C6BC400346105;
 					};
 				};
 			};
@@ -314,6 +369,7 @@
 			projectRoot = "";
 			targets = (
 				EE306D2F201C6BC400346105 /* PropertyFinder */,
+				EE306D8B201D512B00346105 /* PropertyFinderTests */,
 			);
 		};
 /* End PBXProject section */
@@ -327,6 +383,13 @@
 				EE306D3B201C6BC400346105 /* Assets.xcassets in Resources */,
 				EE306D39201C6BC400346105 /* Main.storyboard in Resources */,
 				EE306D77201CC68200346105 /* LoadingViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE306D8A201D512B00346105 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,7 +428,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EE306D88201D512B00346105 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE306D8F201D512B00346105 /* PropertyFinderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE306D92201D512B00346105 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE306D2F201C6BC400346105 /* PropertyFinder */;
+			targetProxy = EE306D91201D512B00346105 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		EE306D37201C6BC400346105 /* Main.storyboard */ = {
@@ -524,6 +603,36 @@
 			};
 			name = Release;
 		};
+		EE306D94201D512B00346105 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PropertyFinderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = IonescuVlad.PropertyFinderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PropertyFinder.app/PropertyFinder";
+			};
+			name = Debug;
+		};
+		EE306D95201D512B00346105 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PropertyFinderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = IonescuVlad.PropertyFinderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PropertyFinder.app/PropertyFinder";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -541,6 +650,15 @@
 			buildConfigurations = (
 				EE306D43201C6BC400346105 /* Debug */,
 				EE306D44201C6BC400346105 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE306D93201D512B00346105 /* Build configuration list for PBXNativeTarget "PropertyFinderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE306D94201D512B00346105 /* Debug */,
+				EE306D95201D512B00346105 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

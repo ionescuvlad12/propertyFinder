@@ -34,15 +34,20 @@ class PropertyTableViewController: UITableViewController, SegueHandler {
         // we need to set in order to have smooth animation when fetching nextPage
         self.tableView!.rowHeight = UITableViewAutomaticDimension
         self.tableView!.estimatedRowHeight = 270
-        
+        //start a timer in case we can't
         loadingView.showLoadingView("Fetching Data", inViewController: self)
         // fetch the data before continuig
         JsonLoader.getJsonFrom(urlString: URLManager.sharedInstance.createURLWith(pageNumber: 0)) { (dict) in
             DispatchQueue.main.async {
-                self.data = dict!
-                self.rootConnector.assembleModule(view: self)
-                self.presenter.viewReady()
-                self.loadingView.hideLoadingView()
+                if dict != nil {
+                    self.data = dict!
+                    self.rootConnector.assembleModule(view: self)
+                    self.presenter.viewReady()
+                    self.loadingView.hideLoadingView()
+                    
+                } else {
+                    self.loadingView.hideLoadingView()
+                }
             }
         }
     }
@@ -81,7 +86,7 @@ class PropertyTableViewController: UITableViewController, SegueHandler {
         let offset = scrollView.contentOffset.y
         let maxOffset = scrollView.contentSize.height - scrollView.frame.size.height
         // 270 is the row estimated height, by increasing this number we could fetch earlier
-        if abs(maxOffset - offset) < 270 && !didFetchNextPage {
+        if abs(maxOffset - offset) < 1620 && !didFetchNextPage && presenter != nil {
             print("Fetch next Page")
             didFetchNextPage = true
             fetchNextPage()

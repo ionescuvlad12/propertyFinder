@@ -16,12 +16,15 @@ class JsonLoader {
         
         //fetching the data from the url
         URLSession.shared.dataTask(with: (url as URL?)!, completionHandler: {(data, response, error) -> Void in
-            
-            if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
-                
-                //printing the json in console
-                print(jsonObj as Any)
-                dict = jsonObj
+            if let jsonData = data {
+                if let jsonObj = try? JSONSerialization.jsonObject(with: jsonData, options: .allowFragments) as? NSDictionary {
+                    
+                    //printing the json in console
+                    print(jsonObj as Any)
+                    dict = jsonObj
+                    completion(dict)
+                }
+            } else {
                 completion(dict)
             }
         }).resume()
