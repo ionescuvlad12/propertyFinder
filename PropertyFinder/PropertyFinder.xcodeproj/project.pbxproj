@@ -40,6 +40,9 @@
 		EE306D99201DC51300346105 /* PropertyListConnectorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D98201DC51300346105 /* PropertyListConnectorTest.swift */; };
 		EE306D9C201DC61900346105 /* EntityGatewayTestDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D9B201DC61900346105 /* EntityGatewayTestDummy.swift */; };
 		EE306D9E201DCD6500346105 /* PropertySortConnectorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D9D201DCD6500346105 /* PropertySortConnectorTest.swift */; };
+		EE306DA1201DD47000346105 /* PropertyTableViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306DA0201DD47000346105 /* PropertyTableViewControllerTest.swift */; };
+		EE306DA3201DE9DE00346105 /* PropertyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306DA2201DE9DE00346105 /* PropertyTableViewCell.swift */; };
+		EE306DA5201DEAA700346105 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306DA4201DEAA700346105 /* TestData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +93,9 @@
 		EE306D98201DC51300346105 /* PropertyListConnectorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListConnectorTest.swift; sourceTree = "<group>"; };
 		EE306D9B201DC61900346105 /* EntityGatewayTestDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityGatewayTestDummy.swift; sourceTree = "<group>"; };
 		EE306D9D201DCD6500346105 /* PropertySortConnectorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertySortConnectorTest.swift; sourceTree = "<group>"; };
+		EE306DA0201DD47000346105 /* PropertyTableViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyTableViewControllerTest.swift; sourceTree = "<group>"; };
+		EE306DA2201DE9DE00346105 /* PropertyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyTableViewCell.swift; sourceTree = "<group>"; };
+		EE306DA4201DEAA700346105 /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -307,6 +313,7 @@
 		EE306D96201DC46900346105 /* Platform */ = {
 			isa = PBXGroup;
 			children = (
+				EE306D9F201DD43200346105 /* Views */,
 				EE306D97201DC47900346105 /* Connectors */,
 			);
 			path = Platform;
@@ -325,8 +332,18 @@
 			isa = PBXGroup;
 			children = (
 				EE306D9B201DC61900346105 /* EntityGatewayTestDummy.swift */,
+				EE306DA4201DEAA700346105 /* TestData.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		EE306D9F201DD43200346105 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EE306DA0201DD47000346105 /* PropertyTableViewControllerTest.swift */,
+				EE306DA2201DE9DE00346105 /* PropertyTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -466,8 +483,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE306D99201DC51300346105 /* PropertyListConnectorTest.swift in Sources */,
+				EE306DA1201DD47000346105 /* PropertyTableViewControllerTest.swift in Sources */,
+				EE306DA3201DE9DE00346105 /* PropertyTableViewCell.swift in Sources */,
 				EE306D8F201D512B00346105 /* PropertyFinderTests.swift in Sources */,
 				EE306D9E201DCD6500346105 /* PropertySortConnectorTest.swift in Sources */,
+				EE306DA5201DEAA700346105 /* TestData.swift in Sources */,
 				EE306D9C201DC61900346105 /* EntityGatewayTestDummy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

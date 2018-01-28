@@ -43,11 +43,8 @@ class PropertyTableViewController: UITableViewController, SegueHandler {
                     self.data = dict!
                     self.rootConnector.assembleModule(view: self)
                     self.presenter.viewReady()
-                    self.loadingView.hideLoadingView()
-                    
-                } else {
-                    self.loadingView.hideLoadingView()
                 }
+                self.loadingView.hideLoadingView()
             }
         }
     }
