@@ -47,6 +47,9 @@
 		EE306DAD201DF90F00346105 /* ShowPropertyListUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306DAC201DF90F00346105 /* ShowPropertyListUseCaseTest.swift */; };
 		EE306DAF201DFB8900346105 /* PropertyResponse+TestConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306DAE201DFB8900346105 /* PropertyResponse+TestConvenience.swift */; };
 		EE306DB1201DFC6800346105 /* Property+TestConviniance.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306DB0201DFC6800346105 /* Property+TestConviniance.swift */; };
+		EE306DB4201DFEAF00346105 /* PropertyTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306DB3201DFEAF00346105 /* PropertyTest.swift */; };
+		EE306DB7201E001400346105 /* PropertyResponseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306DB6201E001400346105 /* PropertyResponseTest.swift */; };
+		EE306DBA201E012D00346105 /* InMemoryRepoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306DB9201E012D00346105 /* InMemoryRepoTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +107,9 @@
 		EE306DAC201DF90F00346105 /* ShowPropertyListUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPropertyListUseCaseTest.swift; sourceTree = "<group>"; };
 		EE306DAE201DFB8900346105 /* PropertyResponse+TestConvenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PropertyResponse+TestConvenience.swift"; sourceTree = "<group>"; };
 		EE306DB0201DFC6800346105 /* Property+TestConviniance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Property+TestConviniance.swift"; sourceTree = "<group>"; };
+		EE306DB3201DFEAF00346105 /* PropertyTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyTest.swift; sourceTree = "<group>"; };
+		EE306DB6201E001400346105 /* PropertyResponseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyResponseTest.swift; sourceTree = "<group>"; };
+		EE306DB9201E012D00346105 /* InMemoryRepoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryRepoTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -360,18 +366,45 @@
 		EE306DA8201DF6D000346105 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				EE306DAB201DF8E300346105 /* Entities */,
+				EE306DB8201E011700346105 /* Data */,
+				EE306DB5201DFFCE00346105 /* IO */,
+				EE306DB2201DFE9900346105 /* Entities */,
+				EE306DAB201DF8E300346105 /* UseCase */,
 				EE306DA9201DF6F800346105 /* UseCaseFactoryTest.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
 		};
-		EE306DAB201DF8E300346105 /* Entities */ = {
+		EE306DAB201DF8E300346105 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
 				EE306DAC201DF90F00346105 /* ShowPropertyListUseCaseTest.swift */,
 			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		EE306DB2201DFE9900346105 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				EE306DB3201DFEAF00346105 /* PropertyTest.swift */,
+			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		EE306DB5201DFFCE00346105 /* IO */ = {
+			isa = PBXGroup;
+			children = (
+				EE306DB6201E001400346105 /* PropertyResponseTest.swift */,
+			);
+			path = IO;
+			sourceTree = "<group>";
+		};
+		EE306DB8201E011700346105 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				EE306DB9201E012D00346105 /* InMemoryRepoTest.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -516,9 +549,12 @@
 				EE306DAF201DFB8900346105 /* PropertyResponse+TestConvenience.swift in Sources */,
 				EE306D8F201D512B00346105 /* PropertyFinderTests.swift in Sources */,
 				EE306DAA201DF6F800346105 /* UseCaseFactoryTest.swift in Sources */,
+				EE306DB4201DFEAF00346105 /* PropertyTest.swift in Sources */,
+				EE306DB7201E001400346105 /* PropertyResponseTest.swift in Sources */,
 				EE306D9E201DCD6500346105 /* PropertySortConnectorTest.swift in Sources */,
 				EE306DB1201DFC6800346105 /* Property+TestConviniance.swift in Sources */,
 				EE306DAD201DF90F00346105 /* ShowPropertyListUseCaseTest.swift in Sources */,
+				EE306DBA201E012D00346105 /* InMemoryRepoTest.swift in Sources */,
 				EE306DA5201DEAA700346105 /* TestData.swift in Sources */,
 				EE306D9C201DC61900346105 /* EntityGatewayTestDummy.swift in Sources */,
 			);

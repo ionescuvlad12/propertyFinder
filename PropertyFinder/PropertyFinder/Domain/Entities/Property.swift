@@ -8,9 +8,14 @@
 
 import Foundation
 
-struct Property {
+struct Property: Equatable {
     let id: Int
     let thumbnailURL: String
     let price: Double
     let beds: Int
+    
+    static func ==(lhs: Property, rhs: Property) -> Bool {
+        if lhs.id != rhs.id { return false }
+        return true
+    }
 }
