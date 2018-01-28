@@ -22,7 +22,7 @@ class PropertyTableViewController: UITableViewController, SegueHandler {
     var connector: PropertyListConnector!
     
     let loadingView = LoadingViewController()
-    
+    var didFetchNextPage = false
     lazy var data: NSDictionary = NSDictionary()
     lazy var rootConnector: PropertyListConnector = {
         let entityGateway = InMemoryRepo(propertiesDictinary: data)
@@ -31,6 +31,10 @@ class PropertyTableViewController: UITableViewController, SegueHandler {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // we need to set in order to have smooth animation when fetching nextPage
+        self.tableView!.rowHeight = UITableViewAutomaticDimension
+        self.tableView!.estimatedRowHeight = 270
+        
         loadingView.showLoadingView("Fetching Data", inViewController: self)
         // fetch the data before continuig
         JsonLoader.getJsonFrom(urlString: URLManager.sharedInstance.createURLWith(pageNumber: 0)) { (dict) in
@@ -69,16 +73,17 @@ class PropertyTableViewController: UITableViewController, SegueHandler {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: PropertyTableViewCell.ID, for: indexPath) as! PropertyTableViewCell
         presenter.configure(cell: cell, forRow: indexPath.row)
-        if indexPath.row == presenter.numberOfProperties - 1 {
-           // fetchNextPage()
-        }
         return cell
     }
     
+    // we calculate the diference between maxOffset and offset in order to figure out when are we reaching the end of the scroll
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offset = scrollView.contentOffset.y
         let maxOffset = scrollView.contentSize.height - scrollView.frame.size.height
-        if abs(maxOffset - offset) < 40 {
+        // 270 is the row estimated height, by increasing this number we could fetch earlier
+        if abs(maxOffset - offset) < 270 && !didFetchNextPage {
+            print("Fetch next Page")
+            didFetchNextPage = true
             fetchNextPage()
         }
     }
@@ -112,7 +117,8 @@ extension PropertyTableViewController: PropertyListView {
     func appendRows() {
         let indexPaths = (tableView.numberOfRows(inSection: 0)..<presenter.numberOfProperties).map { IndexPath(row: $0, section: 0) }
         tableView.beginUpdates()
-        self.tableView.insertRows(at: indexPaths, with: .automatic )
+        self.tableView.insertRows(at: indexPaths, with: .none )
          tableView.endUpdates()
+        didFetchNextPage = false
     }
 }

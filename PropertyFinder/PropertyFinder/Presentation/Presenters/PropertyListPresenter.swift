@@ -61,7 +61,6 @@ class PropertyListPresenter {
 
 extension PropertyListPresenter: MultiplePropertiesResponsesHandler {
     func appendMultiplePropertiesResponses(properties: [PropertyResponse]) {
-        let oldNumberOfProperies = properties.count
         self.properties.append(contentsOf: properties)
         DispatchQueue.main.async {
             self.view.appendRows()

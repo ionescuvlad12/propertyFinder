@@ -36,8 +36,7 @@ extension InMemoryRepo: EntityGateway {
     
     func appendNewPropertiesFrom(dict: NSDictionary) -> [Property] {
         if let propertiesDictionaries = dict.value(forKey: "res") as? [NSDictionary], propertiesDictionaries.count > 0 {
-           properties.append(contentsOf:addPropertiesFrom(dictioanrys: propertiesDictionaries))
-            return properties
+            return addPropertiesFrom(dictioanrys: propertiesDictionaries)
         }
         return []
     }
