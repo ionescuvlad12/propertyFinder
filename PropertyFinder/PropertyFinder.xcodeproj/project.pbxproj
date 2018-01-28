@@ -37,6 +37,8 @@
 		EE306D84201D032200346105 /* URLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D83201D032200346105 /* URLManager.swift */; };
 		EE306D86201D1CA200346105 /* ShowNextPropertyPageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D85201D1CA200346105 /* ShowNextPropertyPageUseCase.swift */; };
 		EE306D8F201D512B00346105 /* PropertyFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D8E201D512B00346105 /* PropertyFinderTests.swift */; };
+		EE306D99201DC51300346105 /* PropertyListConnectorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D98201DC51300346105 /* PropertyListConnectorTest.swift */; };
+		EE306D9C201DC61900346105 /* EntityGatewayTestDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE306D9B201DC61900346105 /* EntityGatewayTestDummy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,8 @@
 		EE306D8C201D512B00346105 /* PropertyFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PropertyFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE306D8E201D512B00346105 /* PropertyFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyFinderTests.swift; sourceTree = "<group>"; };
 		EE306D90201D512B00346105 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE306D98201DC51300346105 /* PropertyListConnectorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListConnectorTest.swift; sourceTree = "<group>"; };
+		EE306D9B201DC61900346105 /* EntityGatewayTestDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityGatewayTestDummy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,10 +294,36 @@
 		EE306D8D201D512B00346105 /* PropertyFinderTests */ = {
 			isa = PBXGroup;
 			children = (
+				EE306D96201DC46900346105 /* Platform */,
 				EE306D8E201D512B00346105 /* PropertyFinderTests.swift */,
 				EE306D90201D512B00346105 /* Info.plist */,
+				EE306D9A201DC5E500346105 /* Utils */,
 			);
 			path = PropertyFinderTests;
+			sourceTree = "<group>";
+		};
+		EE306D96201DC46900346105 /* Platform */ = {
+			isa = PBXGroup;
+			children = (
+				EE306D97201DC47900346105 /* Connectors */,
+			);
+			path = Platform;
+			sourceTree = "<group>";
+		};
+		EE306D97201DC47900346105 /* Connectors */ = {
+			isa = PBXGroup;
+			children = (
+				EE306D98201DC51300346105 /* PropertyListConnectorTest.swift */,
+			);
+			path = Connectors;
+			sourceTree = "<group>";
+		};
+		EE306D9A201DC5E500346105 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				EE306D9B201DC61900346105 /* EntityGatewayTestDummy.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -432,7 +462,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE306D99201DC51300346105 /* PropertyListConnectorTest.swift in Sources */,
 				EE306D8F201D512B00346105 /* PropertyFinderTests.swift in Sources */,
+				EE306D9C201DC61900346105 /* EntityGatewayTestDummy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
